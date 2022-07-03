@@ -1,30 +1,17 @@
-import { themeDecorator, darkModeDecorator } from "../src/design/theme";
-import { themes } from "@storybook/theming";
+import {
+  darkModeDecorator,
+  geistProvider,
+  lightThemeStorybook,
+  darkThemeStorybook,
+} from "../src/design/theme";
 
-export const globalTypes = {
-  theme: {
-    name: "Theme",
-    description: "Global theme for components",
-    defaultValue: "dark",
-    toolbar: {
-      icon: "circlehollow",
-      // Array of plain string values or MenuItem shape (see below)
-      items: ["dark", "light"],
-      // Property that specifies if the name of the item will be displayed
-      showName: true,
-    },
-  },
-};
-
-export const decorators = [themeDecorator, darkModeDecorator];
+export const decorators = [darkModeDecorator, geistProvider];
 
 export const parameters = {
   darkMode: {
-    dark: {
-      ...themes.dark, // copy existing values
-      appContentBg: "#202020", // override main story view frame
-      barBg: "#202020", // override top toolbar
-    },
+    dark: darkThemeStorybook,
+    light: lightThemeStorybook,
+    stylePreview: true,
   },
   layout: "fullscreen",
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -52,5 +39,8 @@ export const parameters = {
         ["about"],
       ],
     },
+  },
+  docs: {
+    theme: lightThemeStorybook,
   },
 };

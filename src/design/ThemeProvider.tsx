@@ -4,6 +4,7 @@ import { getTheme, ThemeInterface } from "./theme";
 
 export const GlobalStyle = createGlobalStyle<{ theme: ThemeInterface }>`
 
+
 `;
 
 interface ProviderProps {
