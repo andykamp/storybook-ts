@@ -20,11 +20,11 @@ export const darkModeDecorator = (Story) => {
   return <Story />;
 };
 
-const lt = Themes.createFromLight({
+export const lt = Themes.createFromLight({
   type: "customLight",
 });
 
-const dt = Themes.createFromDark({
+export const dt = Themes.createFromDark({
   type: "customDark",
 });
 

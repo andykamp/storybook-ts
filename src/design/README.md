@@ -3,8 +3,11 @@
 We utilize the beutifal [Geist ui kit](www.geist.com) as the base ui kit. It has a nice interface for dark/light themes that are easily extendable, and so we costumize that, and inject that theme into both 
 a **GeistProvider** and a **ThemeProvider**(styled components). The implementation can be found in the **./theme.tsx** file.
 
+- to style the storybook in additoin to the limited exposed dark/light theme, we can override stuff in the .storybook/manager-head.html. But here it is important to remember that it will not respect the dark/light theme :( 
+- we can decorate each story with a **decorator** from ./src/decorators. This will add a nice border container to contain the componant and center it properly with correct colors
+- This theming does not work on the **docs** part of storybook. for that to use the light/dark theming we had to create a ./storybook/DocContainer and also add docs:{theming: DocContainer} to **./storybook/preview.jsx**. See https://github.com/hipstersmoothie/storybook-dark-mode/issues/127#issuecomment-1070524402 for details
 
-For general info avbout geist theme look [here](https://geist-ui.dev/en-us/guide/themes)
+For general info avbout geist theme look [here](https://geist-ui.dev/en-us/guide/themes). 
 
 
 The structure of Geist themes are as follows:
@@ -19,7 +22,8 @@ export interface GeistUIThemes {
   expressiveness: GeistUIThemesExpressiveness
 }
 ```
-Where each key in the object literal is defined by the following interfaces:
+
+Where each key in the object literal is defined by the following interfaces (see components/themes/presets/default.ts  to see the default values):
 
 ```js
 export interface GeistUIThemesPalette {

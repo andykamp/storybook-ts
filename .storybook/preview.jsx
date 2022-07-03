@@ -4,6 +4,7 @@ import {
   lightThemeStorybook,
   darkThemeStorybook,
 } from "../src/design/theme";
+import { DocsContainer } from "./DocsContainer";
 
 export const decorators = [darkModeDecorator, geistProvider];
 
@@ -41,6 +42,7 @@ export const parameters = {
     },
   },
   docs: {
-    theme: lightThemeStorybook,
+    // theme: themes.dark,
+    container: DocsContainer,
   },
 };

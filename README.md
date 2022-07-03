@@ -1,15 +1,24 @@
 
 
 #TODO 
-- converge on theme and remove access theme files
+- [✓] converge on theme and remove access theme files
+- [✓] make the iphone stuff work also
+- [✓] make the container so it is centered core´rectly (also in docs)
+
+- add markdown styles/theming
+- look at storybook insp and decide on atomic structure design h
+- add atomic structure and markdown style
+
 - converge on icons and icon display
-- make the container so it is centered core´rectly (also in docs)
+- converge and add typography and style tokens etc (figure out what should be included)
 - make sure that the docs actually show the right code
 - remove buttons at top that does not contribute 
-- make the iphone stuff work also
 - add figma into the repo
 - remove the vite part and folloe [this lik](https://davidyeiser.com/tutorials/storybook-react-with-dark-mode)
-- setup tests
+- setup tests pipeline and descripe how this is compoared to actual application testing with cypress!!!!
+    - this project is a storybook templote with storybook related testing
+    - the other one is a application testing with cypress and api testing
+- add this
 
 
 # Setup
@@ -29,5 +38,3 @@ In order to run with node 18 and up you please follow this issues [link](https:/
 - followed this [Text](https://davidyeiser.com/tutorials/storybook-react-with-dark-mode) to get dark/light mode
 - use [geist](https://geist-ui.dev/) as theme and inspiration
 
-- to style the storybook in additoin to the limited exposed dark/light theme, we can override stuff in the .storybook/manager-head.html. But here it is important to remember that it will not respect the dark/light theme :( 
-- we can decorate each story with a **decorator** from ./src/decorators. This will add a nice border container to contain the componant and center it properly with correct colors
