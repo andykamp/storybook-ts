@@ -5,7 +5,7 @@
 - [✓] make the iphone stuff work also
 - [✓] make the container so it is centered core´rectly (also in docs)
 
-- add markdown styles/theming
+- [✓] add markdown styles/theming
 - look at storybook insp and decide on atomic structure design h
 - add atomic structure and markdown style
 
@@ -38,3 +38,13 @@ In order to run with node 18 and up you please follow this issues [link](https:/
 - followed this [Text](https://davidyeiser.com/tutorials/storybook-react-with-dark-mode) to get dark/light mode
 - use [geist](https://geist-ui.dev/) as theme and inspiration
 
+
+# Plugins #
+
+- we remove the background plugin because of the themeing
+- add [storybook-addon-grid](storybook-addon-grid)  (background grid)
+- add [addon-links](https://storybook.js.org/addons/@storybook/addon-links)(link as a prototype)
+- add [addon-a11y](https://storybook.js.org/addons/@storybook/addon-a11y) (accessivbility)
+- add [designs](https://storybook.js.org/addons/storybook-addon-designs) (add figma links)
+- add [storysource](https://storybook.js.org/addons/@storybook/addon-storysource) (view exact story source code)
+- 
