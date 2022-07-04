@@ -6,15 +6,16 @@
 - [✓] make the container so it is centered core´rectly (also in docs)
 
 - [✓] add markdown styles/theming
+- [✓] add figma into the repo
 - look at storybook insp and decide on atomic structure design h
 - add atomic structure and markdown style
+- remove the vite part and folloe [this lik](https://davidyeiser.com/tutorials/storybook-react-with-dark-mode)
+- 
 
 - converge on icons and icon display
 - converge and add typography and style tokens etc (figure out what should be included)
 - make sure that the docs actually show the right code
 - remove buttons at top that does not contribute 
-- add figma into the repo
-- remove the vite part and folloe [this lik](https://davidyeiser.com/tutorials/storybook-react-with-dark-mode)
 - setup tests pipeline and descripe how this is compoared to actual application testing with cypress!!!!
     - this project is a storybook templote with storybook related testing
     - the other one is a application testing with cypress and api testing
@@ -45,6 +46,6 @@ In order to run with node 18 and up you please follow this issues [link](https:/
 - add [storybook-addon-grid](storybook-addon-grid)  (background grid)
 - add [addon-links](https://storybook.js.org/addons/@storybook/addon-links)(link as a prototype)
 - add [addon-a11y](https://storybook.js.org/addons/@storybook/addon-a11y) (accessivbility)
-- add [designs](https://storybook.js.org/addons/storybook-addon-designs) (add figma links)
-- add [storysource](https://storybook.js.org/addons/@storybook/addon-storysource) (view exact story source code)
+- [✓] add [designs](https://storybook.js.org/addons/storybook-addon-designs) (add figma links)
+- [✓] add [storysource](https://storybook.js.org/addons/@storybook/addon-storysource) (view exact story source code)
 - 

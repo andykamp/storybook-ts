@@ -1,6 +1,7 @@
 import { WithThemeProvider } from "./ThemeProvider";
 import { useDarkMode } from "storybook-dark-mode";
 import { create } from "@storybook/theming";
+import logo from "../logo.svg";
 import { Themes, GeistProvider, CssBaseline } from "@geist-ui/core";
 
 // ---------------------------------------------
@@ -46,9 +47,9 @@ export const geistProvider = (Story, context) => {
 export const lightThemeStorybook = create({
   base: "light",
 
-  brandTitle: "My custom storybook",
+  brandTitle: "uber",
   brandUrl: "https://example.com",
-  // brandImage: "https://place-hold.it/350x150",
+  brandImage: logo,
   brandTarget: "_self",
 
   colorPrimary: lt.palette.violet,
@@ -83,9 +84,9 @@ export const lightThemeStorybook = create({
 export const darkThemeStorybook = create({
   base: "dark",
 
-  brandTitle: "My custom storybook",
+  brandTitle: "uber",
   brandUrl: "https://example.com",
-  // brandImage: "https://place-hold.it/350x150",
+  brandImage: logo,
   brandTarget: "_self",
 
   colorPrimary: dt.palette.violet,

@@ -5,7 +5,7 @@ import { StyledFullRowPadded, StyledPlayground } from "../decorators";
 import { Button } from "./GeistButton";
 
 export default {
-  title: "GeistButton",
+  title: "atoms/GeistButton",
   component: Button,
   decorators: [
     (Story) => (
@@ -25,3 +25,10 @@ Default.args = {};
 
 export const Playground = Template.bind({});
 Playground.args = {};
+
+Default.parameters = {
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File",
+  },
+};

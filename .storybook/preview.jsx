@@ -27,6 +27,8 @@ export const parameters = {
     enableShortcuts: false,
     storySort: {
       order: [
+        "Welcome",
+        "Changelog",
         "design",
         ["about"],
         "atoms",

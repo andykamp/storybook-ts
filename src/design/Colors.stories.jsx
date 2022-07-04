@@ -1,7 +1,6 @@
 import { Theme } from "@storybook/theming";
 import styled from "styled-components";
 import { ColorItem, ColorPalette } from "./ColorPalette";
-import { getTheme } from "./theme";
 
 import { getBlockBackgroundStyle } from "./BlockBackgroundStyles";
 
@@ -44,21 +43,22 @@ const flattenObj = (ob) => {
 };
 
 export const defaultStyle = (args, { globals: { theme } }) => {
-  const themeValues = flattenObj(getTheme(theme));
+  return null;
+  // const themeValues = flattenObj(getTheme(theme));
 
-  const themeArray = Object.keys(themeValues);
-  console.log("fffff", themeValues);
-  return (
-    <Background>
-      <ColorPalette>
-        {themeArray.map((colorName) => {
-          var color = themeValues[colorName];
-          if (typeof color !== "string" || color[0] !== "#") return null;
-          return (
-            <ColorItem title={colorName} subtitle={color} colors={[color]} />
-          );
-        })}
-      </ColorPalette>
-    </Background>
-  );
+  // const themeArray = Object.keys(themeValues);
+  // console.log("fffff", themeValues);
+  // return (
+  //   <Background>
+  //     <ColorPalette>
+  //       {themeArray.map((colorName) => {
+  //         var color = themeValues[colorName];
+  //         if (typeof color !== "string" || color[0] !== "#") return null;
+  //         return (
+  //           <ColorItem title={colorName} subtitle={color} colors={[color]} />
+  //         );
+  //       })}
+  //     </ColorPalette>
+  //   </Background>
+  // );
 };
