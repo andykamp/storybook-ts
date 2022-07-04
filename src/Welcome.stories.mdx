@@ -1,5 +1,9 @@
 import { Meta } from '@storybook/addon-docs';
 
+import {Grid, Card, Text} from '@geist-ui/core'
+import {WelcomeCard} from './stories/WelcomeCard.tsx'
+import {atoms, molecules, organisms, templates, pages} from './stories/assets'
+
 <Meta title="Welcome" />
 
 # Welcome to Storybook
@@ -11,3 +15,29 @@ Browse example stories now by navigating to them in the sidebar.
 View their code in the `stories` directory to learn how they work.
 We recommend building UIs with a [**component-driven**](https://componentdriven.org) process starting with atomic components and ending with pages.
 
+<Text h4 b style={{ letterSpacing: '1px', textTransform: '' }}> Atom design principles </Text>
+
+<Grid.Container gap={1} justify="center">
+
+<Grid xs={24} lg={24} gap={2}>
+    <WelcomeCard hoverable imgSrc={atoms} title='Atoms' description='Atoms are....'/>
+ </Grid>
+ 
+<Grid xs={24} lg={24} gap={2}>
+    <WelcomeCard hoverable imgSrc={molecules} title='Molecules' description='Molecules are....'/>
+ </Grid>
+ 
+<Grid xs={24} lg={24} gap={2}>
+    <WelcomeCard hoverable  imgSrc={organisms} title='organisms' description='organisms are....'/>
+ </Grid>
+ 
+<Grid xs={24} lg={24} gap={2}>
+    <WelcomeCard  hoverable imgSrc={templates} title='templates' description='templates are....'/>
+ </Grid>
+ 
+<Grid xs={24} lg={24} gap={2}>
+    <WelcomeCard  hoverable imgSrc={pages} title='pages' description='pages are....'/>
+ </Grid>
+ 
+ 
+ </Grid.Container>

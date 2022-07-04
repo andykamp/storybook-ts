@@ -29,7 +29,7 @@ export const dt = Themes.createFromDark({
   type: "customDark",
 });
 
-export const geistProvider = (Story, context) => {
+export const GeistProviderTs = (Story, context) => {
   const darkModeOn = useDarkMode();
   return (
     <GeistProvider
@@ -44,10 +44,25 @@ export const geistProvider = (Story, context) => {
   );
 };
 
+export const GeistProviderMdx = ({ children }) => {
+  const darkModeOn = useDarkMode();
+  return (
+    <GeistProvider
+      themeType={darkModeOn ? "customDark" : "customLight"}
+      themes={[lt, dt]}
+    >
+      <WithThemeProvider theme={darkModeOn ? dt : lt}>
+        <CssBaseline />
+        {children}
+      </WithThemeProvider>
+    </GeistProvider>
+  );
+};
+
 export const lightThemeStorybook = create({
   base: "light",
 
-  brandTitle: "uber",
+  brandTitle: "My custom storybook",
   brandUrl: "https://example.com",
   brandImage: logo,
   brandTarget: "_self",
@@ -66,7 +81,7 @@ export const lightThemeStorybook = create({
   fontCode: "sans",
 
   // Text colors
-  textColor: lt.palette.accents_6,
+  textColor: lt.palette.foreground, //lt.palette.accents_6,
   textInverseColor: "red",
 
   // Toolbar defaucustomGiestThemeLight and active colors
@@ -103,7 +118,7 @@ export const darkThemeStorybook = create({
   fontCode: "sans",
 
   // Text colors
-  textColor: dt.palette.accents_6,
+  textColor: dt.palette.foreground, //lt.palette.accents_6,
   textInverseColor: "red",
 
   // Toolbar defaucustomGiestThemeLight and active colors

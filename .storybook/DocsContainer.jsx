@@ -1,7 +1,11 @@
 import React from "react";
 import { DocsContainer as BaseContainer } from "@storybook/addon-docs/blocks";
 import { useDarkMode } from "storybook-dark-mode";
-import { lightThemeStorybook, darkThemeStorybook } from "../src/design/theme";
+import {
+  GeistProviderMdx,
+  lightThemeStorybook,
+  darkThemeStorybook,
+} from "../src/design/theme";
 
 export const DocsContainer = ({ children, context }) => {
   const dark = useDarkMode();
@@ -25,7 +29,7 @@ export const DocsContainer = ({ children, context }) => {
         },
       }}
     >
-      {children}
+      <GeistProviderMdx>{children}</GeistProviderMdx>
     </BaseContainer>
   );
 };

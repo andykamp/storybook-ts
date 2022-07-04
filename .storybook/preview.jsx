@@ -1,12 +1,12 @@
 import {
   darkModeDecorator,
-  geistProvider,
+  GeistProviderTs,
   lightThemeStorybook,
   darkThemeStorybook,
 } from "../src/design/theme";
 import { DocsContainer } from "./DocsContainer";
 
-export const decorators = [darkModeDecorator, geistProvider];
+export const decorators = [darkModeDecorator, GeistProviderTs];
 
 export const parameters = {
   darkMode: {
