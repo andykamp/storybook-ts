@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, ReactElement } from "react";
 import styled from "styled-components";
 import { Card, Grid, Spacer } from "@geist-ui/core";
 import { IconSearcher } from "./IconSearcher";
 import { IconContainer } from "./IconContainer";
 import * as ICONS from "@geist-ui/icons";
 
+export interface OptionsObj {
+  label: string;
+  value: string;
+}
+
 // list of all geist icons
-const geistIcons = Object.keys(ICONS).map((key) => ({
+const geistIcons: OptionsObj[] = Object.keys(ICONS).map((key) => ({
   label: key,
   value: key,
 }));
@@ -21,11 +26,11 @@ interface Props {}
 
 export const Icons = ({}: Props) => {
   const [options, setOptions] = useState(IconList);
-  const updateVisibleIcons = (options) => {
+  const updateVisibleIcons = (options: OptionsObj[]) => {
     setOptions(options);
   };
 
-  const getIcon = (iconName): ReactElement => {
+  const getIcon = (iconName: string) => {
     const ComponentName = ICONS[iconName];
     if (!ComponentName) return null;
     return <ComponentName />;
@@ -40,10 +45,10 @@ export const Icons = ({}: Props) => {
         <Spacer h={1} />
         <StyledContent>
           <Grid.Container gap={1} justify="center">
-            {options.map(({ label, value }) => {
+            {options.map(({ label }) => {
               const icon = getIcon(label);
               return (
-                <Grid key={label} xs={12} lg={6} gap={1}>
+                <Grid key={label} xs={12} lg={6}>
                   {icon && <IconContainer icon={icon} name={label} />}
                   {!icon && <div>not found</div>}
                 </Grid>

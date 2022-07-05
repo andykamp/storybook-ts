@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { AutoComplete } from "@geist-ui/core";
-import { IconList } from "./Icons";
-
-const StyledContainer = styled.div``;
+import { IconList, OptionsObj } from "./Icons";
 
 interface Props {
-  onSelectedChange: void;
-  onSearchChange: void;
+  onSelectedChange: (options: OptionsObj[]) => void;
+  onSearchChange: (value: string) => void;
   allOptions: object[];
 }
 

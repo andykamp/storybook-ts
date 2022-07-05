@@ -7,7 +7,8 @@
     "tsc": "rm -rf dist && tsc",
     "storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
     "build-storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook",
-    "test-storybook": "test-storybook"
+    "test-storybook": "test-storybook",
+    "test-visual": "npx chromatic --project-token=82561cf7a02a"
   },
   "dependencies": {
     "@geist-ui/core": "^2.3.8",
@@ -31,6 +32,7 @@
     "@types/react-dom": "^18.0.0",
     "@vitejs/plugin-react": "^1.3.0",
     "babel-loader": "^8.2.5",
+    "chromatic": "^6.7.0",
     "jest": "27",
     "storybook-addon-designs": "^6.3.1",
     "storybook-dark-mode": "^1.1.0",
