@@ -1,8 +1,9 @@
 import { Meta } from '@storybook/addon-docs';
+import {linkTo} from '@storybook/addon-links'
 
 import {Grid, Card, Text} from '@geist-ui/core'
-import {WelcomeCard} from './stories/WelcomeCard.tsx'
-import {atoms, molecules, organisms, templates, pages} from './stories/assets'
+import {WelcomeCard} from './docs/WelcomeCard.tsx'
+import {atoms, molecules, organisms, templates, pages} from './assets'
 
 <Meta title="Welcome" />
 
@@ -20,23 +21,23 @@ We recommend building UIs with a [**component-driven**](https://componentdriven.
 <Grid.Container gap={1} justify="center">
 
 <Grid xs={24} lg={24} gap={2}>
-    <WelcomeCard hoverable imgSrc={atoms} title='Atoms' description='Atoms are....'/>
+    <WelcomeCard onClick={linkTo('atoms/about')} hoverable imgSrc={atoms} title='Atoms' description='Atoms are....'/>
  </Grid>
  
 <Grid xs={24} lg={24} gap={2}>
-    <WelcomeCard hoverable imgSrc={molecules} title='Molecules' description='Molecules are....'/>
+    <WelcomeCard onClick={linkTo('molecules/about')} hoverable imgSrc={molecules} title='Molecules' description='Molecules are....'/>
  </Grid>
  
 <Grid xs={24} lg={24} gap={2}>
-    <WelcomeCard hoverable  imgSrc={organisms} title='organisms' description='organisms are....'/>
+    <WelcomeCard onClick={linkTo('organisms/about')} hoverable  imgSrc={organisms} title='organisms' description='organisms are....'/>
  </Grid>
  
 <Grid xs={24} lg={24} gap={2}>
-    <WelcomeCard  hoverable imgSrc={templates} title='templates' description='templates are....'/>
+    <WelcomeCard  onClick={linkTo('templates/about')} hoverable imgSrc={templates} title='templates' description='templates are....'/>
  </Grid>
  
 <Grid xs={24} lg={24} gap={2}>
-    <WelcomeCard  hoverable imgSrc={pages} title='pages' description='pages are....'/>
+    <WelcomeCard  onClick={linkTo('pages/about')} hoverable imgSrc={pages} title='pages' description='pages are....'/>
  </Grid>
  
  

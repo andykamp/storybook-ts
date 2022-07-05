@@ -8,6 +8,9 @@ const StyledContainer = styled.div`
   justify-content: left;
   align-items: center;
   width: 100%;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const StyledContent = styled.div`
@@ -23,6 +26,7 @@ const StyledImage = styled(Image)`
 `;
 
 interface Props {
+  onClick: any;
   imgSrc: string;
   title: string;
   description: string;
@@ -31,6 +35,7 @@ interface Props {
 }
 
 export const WelcomeCard = ({
+  onClick,
   imgSrc,
   title,
   description,
@@ -38,7 +43,7 @@ export const WelcomeCard = ({
   shadow,
 }: Props) => {
   return (
-    <Card width="100%" hoverable={hoverable} shadow={shadow}>
+    <Card onClick={onClick} width="100%" hoverable={hoverable} shadow={shadow}>
       <StyledContainer width="100%">
         <StyledImage width="60px" height="60px" src={imgSrc} />
         <StyledContent>

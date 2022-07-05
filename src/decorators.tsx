@@ -50,9 +50,9 @@ export const StyledFullColPadded = styled.div`
 // Playground component
 // ---------------------------------------------
 
-export const StyledPlayground = ({ children }) => {
+export const StyledPlayground = ({ width, children }) => {
   return (
-    <StyledPlaygroundContainer>
+    <StyledPlaygroundContainer width={width}>
       <StyledPlaygroundCard>{children}</StyledPlaygroundCard>
       <StyledPlaygroundBottom>
         Container made with &hearts;
@@ -66,6 +66,7 @@ export const StyledPlaygroundContainer = styled.div`
     flex-direction: column;
     border: 1px solid ${(props) => props.theme.palette.accents_2};
     border-radius: 6px;
+    min-width: ${(props) => props.width};
 } 
 `;
 export const StyledPlaygroundCard = styled.div`

@@ -1,0 +1,74 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { CodeCollapse } from '../docs/CodeCollapse'
+import { Grid, Spacer } from '@geist-ui/core'
+
+<Meta title="design/Spacing" />
+
+ 
+# Spacing
+
+We use a set of standardized spacing to remove redundant and ad-hoc code.
+
+
+### Vertical
+
+<CodeCollapse direction={'column'} textAlignment='flex-start' 
+  content={<Grid.Container>
+  <Grid xs={24} style={{ background: '#444', borderRadius: '6px' }}>
+    <Spacer h={1}/>
+  </Grid>
+  <Spacer h={1}/>
+  <Grid xs={24} style={{ background: '#444', borderRadius: '6px' }}>
+    <Spacer h={2}/>
+  </Grid>
+  <Spacer h={2}/>
+  <Grid xs={24} style={{ background: '#666', borderRadius: '6px' }}>
+    <Spacer h={3}/>
+  </Grid>
+  <Spacer h={3}/>
+  <Grid xs={24} style={{ background: '#999', borderRadius: '6px' }}>
+    <Spacer h={4}/>
+  </Grid>
+</Grid.Container>} code={`<Grid.Container>
+  <Grid xs={24} style={{ background: '#444', borderRadius: '6px' }}>
+    <Spacer h={1}/>
+  </Grid>
+    <Spacer h={1}/>
+  <Grid xs={24} style={{ background: '#444', borderRadius: '6px' }}>
+    <Spacer h={2}/>
+  </Grid>
+  <Spacer h={2}/>
+  <Grid xs={24} style={{ background: '#666', borderRadius: '6px' }}>
+    <Spacer h={3}/>
+  </Grid>
+  <Spacer h={3}/>
+  <Grid xs={24} style={{ background: '#999', borderRadius: '6px' }}>
+    <Spacer h={4}/>
+  </Grid>
+</Grid.Container>`}/>
+
+
+
+
+### Horizontal
+
+<CodeCollapse direction={'column'} textAlignment='flex-start' 
+  content={<Grid.Container>
+    <Grid xs={4} style={{ background: '#444', borderRadius: '6px' }} />
+    <Spacer w={5}/>
+    <Grid xs={4} style={{ background: '#444', borderRadius: '6px' }} />
+</Grid.Container>} code={`<Grid.Container>
+    <Grid xs={4} style={{ background: '#444', borderRadius: '6px' }} />
+    <Spacer w={5}/>
+    <Grid xs={4} style={{ background: '#444', borderRadius: '6px' }} />
+</Grid.Container>`}/>
+
+
+
+
+
+
+
+
+
+

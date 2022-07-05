@@ -7,19 +7,28 @@
 
 - [✓] add markdown styles/theming
 - [✓] add figma into the repo
-- look at storybook insp and decide on atomic structure design h
-- add atomic structure and markdown style
-- remove the vite part and folloe [this lik](https://davidyeiser.com/tutorials/storybook-react-with-dark-mode)
-- 
-
-- converge on icons and icon display
-- converge and add typography and style tokens etc (figure out what should be included)
+- [✓] look at storybook insp and decide on atomic structure design h
+- [✓] add atomic structure and markdown style
+- [✓] optimize icon gallery like in storybook ragnarivisiion. Currently very slow
+- [✓] converge on icons and icon display
+- [✓] converge and add typography and style tokens etc (figure out what should be included)
+- [✓] remove buttons at top that does not contribute 
+- [✓] clean up /docs  
 - make sure that the docs actually show the right code
-- remove buttons at top that does not contribute 
+
+- create headers etc in figma 
+- add them to the docs and also add the figma files for them
+- by default close the docs page and maybe add another icon/color to that spesific one? but at bottom?
+- make sure that i clean up so it is as little dependent on geist icons and other stuff as possibel. ONLY WRITE ONCE so should be easy to change!!!!
+
+- playground story has knobs to play width!!
+
 - setup tests pipeline and descripe how this is compoared to actual application testing with cypress!!!!
     - this project is a storybook templote with storybook related testing
     - the other one is a application testing with cypress and api testing
-- add this
+    
+- remove the vite part and folloe [this lik](https://davidyeiser.com/tutorials/storybook-react-with-dark-mode)
+- write a proper introduction page
 
 
 # Setup
@@ -44,8 +53,6 @@ In order to run with node 18 and up you please follow this issues [link](https:/
 
 - we remove the background plugin because of the themeing
 - add [storybook-addon-grid](storybook-addon-grid)  (background grid)
-- add [addon-links](https://storybook.js.org/addons/@storybook/addon-links)(link as a prototype)
 - add [addon-a11y](https://storybook.js.org/addons/@storybook/addon-a11y) (accessivbility)
 - [✓] add [designs](https://storybook.js.org/addons/storybook-addon-designs) (add figma links)
 - [✓] add [storysource](https://storybook.js.org/addons/@storybook/addon-storysource) (view exact story source code)
-- 

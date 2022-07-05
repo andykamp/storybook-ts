@@ -1,7 +1,7 @@
 import { WithThemeProvider } from "./ThemeProvider";
 import { useDarkMode } from "storybook-dark-mode";
 import { create } from "@storybook/theming";
-import logo from "../logo.svg";
+import logo from "../assets/logo.svg";
 import { Themes, GeistProvider, CssBaseline } from "@geist-ui/core";
 
 // ---------------------------------------------
@@ -16,8 +16,6 @@ export function addAlpha(color: string, opacity: number) {
 
 export const darkModeDecorator = (Story) => {
   const darkModeOn = useDarkMode();
-  console.log(darkModeOn);
-
   return <Story />;
 };
 

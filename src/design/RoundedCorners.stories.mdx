@@ -1,0 +1,26 @@
+
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { CodeCollapse } from '../docs/CodeCollapse'
+import { Card, Spacer } from '@geist-ui/core'
+
+<Meta title="design/RoundedCorners" />
+
+ 
+# Rounded corners
+
+We use border-radius = 6px all over the UI.
+
+A magic trick worth noting is to use parent-border-radius/2 for children. 
+
+<CodeCollapse direction={'column'} textAlignment='flex-start' 
+  content={
+  <Card width='100%'style={{ background: '#999'}}>
+    <Spacer h={4}/>
+  </Card>
+} code={`<Card width='100%'style={{ background: '#999'}}>
+    <Spacer h={4}/>
+  </Card>`}/>
+
+
+
+

@@ -1,0 +1,43 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { CodeCollapse } from '../docs/CodeCollapse'
+import { Spacer } from '@geist-ui/core'
+import { Github } from '@geist-ui/icons'
+
+<Meta title="design/Icons" />
+
+ 
+# Icons
+
+Display semantic vector graphics in SVG format.
+
+### Color
+
+<CodeCollapse content={<Github color="red" />} code={`<Github color="red"/>`}/>
+
+
+### Sizes
+
+  <CodeCollapse content={<>
+  <Github size={16} /> <Spacer inline w={.35} />
+  <Github size={20} /> <Spacer inline w={.35} />
+  <Github size={24} /> <Spacer inline w={.35} />
+  <Github size={28} /> <Spacer inline w={.35} />
+  <Github size={32} /> <Spacer inline w={.35} />
+  <Github size={36} />
+</>} code={`<>
+  <Github size={16} /> <Spacer inline w={.35} />
+  <Github size={20} /> <Spacer inline w={.35} />
+  <Github size={24} /> <Spacer inline w={.35} />
+  <Github size={28} /> <Spacer inline w={.35} />
+  <Github size={32} /> <Spacer inline w={.35} />
+  <Github size={36} />
+</>`}/>
+
+
+
+### Geist icons
+
+<Story id='docs-icons--default'/>
+
+
+

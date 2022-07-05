@@ -1,10 +1,83 @@
-import { Canvas, Meta } from '@storybook/addon-docs';
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { CodeCollapse } from '../docs/CodeCollapse'
+import { Text, Spacer } from '@geist-ui/core'
+import { Github } from '@geist-ui/icons'
 
 <Meta title="design/Typography" />
 
  
 # Typography
 
+### Normal text 
 
-TODO:
-- [ ] copy text and images from figma
+Normal text comes in default (16px) and with a **small** (14px) attribute.
+
+<CodeCollapse direction={'column'} textAlignment='flex-start' 
+  content={<>
+  <Text span type="default">default (16px)</Text>
+  <Text span type="default" small >default small (14px)</Text>
+</>} code={`<>
+  <Text span type="default">default (16px)</Text>
+  <Text span type="default" small >default small (14px)</Text>
+</>`}/>
+
+### Different types of text
+
+<CodeCollapse direction={'column'} textAlignment='flex-start' 
+  content={<>
+  <Text h1 >h1 title (48px)</Text>
+  <Text h2>h2 title (36px)</Text>
+  <Text h3>h3 title (24px)</Text>
+  <Text h4>h4 title ( 20px)</Text>
+  <Text h5>h5 title (16px)</Text>
+  <Text span type="default">default (16px)</Text>
+  <Text span type="secondary">secondary</Text>
+  <Text span type="success">success</Text>
+  <Text span type="warning">warning</Text>
+  <Text span type="secondary">secondary</Text>
+  <Text span type="error">error</Text>
+  <Text span b>b for bold</Text>
+  <Text span i>i for italic</Text>
+  <Text span em>em</Text>
+  <Text span del>del</Text>
+  <Text span blockquote>blockquote</Text>
+</>} code={`<>
+  <Text h1 >h1 title (48px)</Text>
+  <Text h2>h2 title (36px)</Text>
+  <Text h3>h3 title (24px)</Text>
+  <Text h4>h4 title ( 20px)</Text>
+  <Text h5>h5 title (16px)</Text>
+  <Text span type="default">default (16px)</Text>
+  <Text span type="secondary">secondary</Text>
+  <Text span type="success">success</Text>
+  <Text span type="warning">warning</Text>
+  <Text span type="secondary">secondary</Text>
+  <Text span type="error">error</Text>
+  <Text span b>b for bold</Text>
+  <Text span i>i for italic</Text>
+  <Text span em>em</Text>
+  <Text span del>del</Text>
+  <Text span blockquote>blockquote</Text>
+</>`}/>
+
+
+### Sizes
+
+<CodeCollapse direction={'column'} textAlignment='flex-start' 
+  content={<>
+  <Text font="12px" mt={0}>Font Size: 12px;</Text>
+  <Text font="14px">Font Size: 14px;</Text>
+  <Text font="1rem">Font Size: 1rem;</Text>
+  <Text scale={1.25} mb={0}>Font Size Scale: 1.25;</Text>
+</>} code={`<>
+  <Text font="12px" mt={0}>Font Size: 12px;</Text>
+  <Text font="14px">Font Size: 14px;</Text>
+  <Text font="1rem">Font Size: 1rem;</Text>
+  <Text scale={1.25} mb={0}>Font Size Scale: 1.25;</Text>
+</>`}/>
+
+
+
+
+
+

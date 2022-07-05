@@ -17,6 +17,15 @@ export const parameters = {
   layout: "fullscreen",
   actions: { argTypesRegex: "^on[A-Z].*" },
   backgrounds: { disable: true },
+  toolbar: {
+    title: { hidden: false },
+    zoom: { hidden: true },
+    eject: { hidden: true },
+    copy: { hidden: true },
+    fullscreen: { hidden: false },
+    "storybook/background": { hidden: true },
+    "storybook/viewport": { hidden: false },
+  },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -28,9 +37,10 @@ export const parameters = {
     storySort: {
       order: [
         "Welcome",
-        "Changelog",
+        "Introduction",
+        "Testing",
         "design",
-        ["about"],
+        ["about", "Colors", "Typography", "Icons"],
         "atoms",
         ["about"],
         "molecules",
@@ -41,6 +51,18 @@ export const parameters = {
         ["about"],
         "pages",
         ["about"],
+        "docs",
+        [
+          "about",
+          "WelcomeCard",
+          "CodeCollapse",
+          "ColorRowSingle",
+          "ColorRow",
+          "ColorSection",
+          "IconSearcher",
+          "IconContainer",
+          "Icons",
+        ],
       ],
     },
   },
