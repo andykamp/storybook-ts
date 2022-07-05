@@ -8,4 +8,16 @@ import {Grid, Card, Text} from '@geist-ui/core'
 # Testing
 
 
-TODO
+Storybook provides a clean-room environment for testing components in isolation.
+
+
+## Spot checking
+The simplest testing method is manual “spot checking”. You run Storybook locally, then eyeball every story to verify its appearance and behavior. Publish your Storybook online to share reproductions and get teammates involved.
+
+## Tests runner (https://storybook.js.org/docs/react/writing-tests/test-runner) 
+
+Storybook test runner turns all of your stories into executable tests. It is powered by Jest and Playwright.
+
+For those without a play function: it verifies whether the story renders without any errors.
+For those with a play function: it also checks for errors in the play function and that all assertions passed.
+These tests run in a live browser and can be executed via the command line or your CI server.

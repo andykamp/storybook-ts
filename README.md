@@ -29,6 +29,9 @@
     
 - remove the vite part and folloe [this lik](https://davidyeiser.com/tutorials/storybook-react-with-dark-mode)
 - write a proper introduction page
+- publish and deploy workflow
+- changelog
+- precommits
 
 
 # Setup
