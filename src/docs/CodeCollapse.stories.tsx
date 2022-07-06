@@ -1,17 +1,15 @@
 import React from "react";
-import { StyledFullRowPadded, StyledPlayground } from "../decorators";
+import { StyledFullRowPadded } from "../decorators";
 import { ComponentMeta } from "@storybook/react";
-import { CodeCollapse } from "./CodeCollapse";
+import { CodeCollapse } from "@/docs/CodeCollapse";
 
 export default {
   title: "docs/CodeCollapse",
   component: CodeCollapse,
   decorators: [
     (Story) => (
-      <StyledFullRowPadded>
-        <StyledPlayground width="300px">
-          <Story />
-        </StyledPlayground>
+      <StyledFullRowPadded width="300px">
+        <Story />
       </StyledFullRowPadded>
     ),
   ],

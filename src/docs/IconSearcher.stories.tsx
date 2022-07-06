@@ -2,7 +2,7 @@ import React from "react";
 
 import { StyledFullRowPadded, StyledPlayground } from "../decorators";
 import { ComponentMeta } from "@storybook/react";
-import { IconSearcher } from "./IconSearcher";
+import { IconSearcher } from "@/docs/IconSearcher";
 import * as ICONS from "@geist-ui/icons";
 
 export default {

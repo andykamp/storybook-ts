@@ -3,7 +3,7 @@ import React from "react";
 import { StyledFullRowPadded } from "../decorators";
 import { ComponentMeta } from "@storybook/react";
 
-import { Icons } from "./Icons";
+import { Icons } from "@/docs/Icons";
 
 export default {
   title: "docs/Icons",

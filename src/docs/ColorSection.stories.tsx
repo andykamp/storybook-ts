@@ -3,7 +3,7 @@ import React from "react";
 import { StyledFullRowPadded } from "../decorators";
 import { ComponentMeta } from "@storybook/react";
 
-import { ColorSection } from "./ColorSection";
+import { ColorSection } from "@/docs/ColorSection";
 
 export default {
   title: "docs/ColorSection",

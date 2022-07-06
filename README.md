@@ -1,4 +1,11 @@
+### OPS this setup is build for node version=18.3! If CI or chromatic fails it might be because of this.
 
+## Aliases
+
+To add aliases you have to: 
+- manually update tsConfig.json paths
+- path in vite.config.ts is automatically updated using [vite-tsconfig-paths](https://github.com/aleclarson/vite-tsconfig-paths) 
+- manually update the **.storybook/main.ts** aliase aliases
 
 #TODO 
 - [✓] converge on theme and remove access theme files
@@ -14,6 +21,7 @@
 - [✓] converge and add typography and style tokens etc (figure out what should be included)
 - [✓] remove buttons at top that does not contribute 
 - [✓] clean up /docs  
+- fix containers
 -  add aliasing (https://storybook.js.org/docs/react/builders/vite)
 - make sure that the docs actually show the right code
 

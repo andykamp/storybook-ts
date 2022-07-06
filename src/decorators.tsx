@@ -5,7 +5,7 @@ export const StyledFullRow = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  min-width: ${(props) => props.width || "100%"};
   height: 100%;
 
   background: ${(props) => props.theme.palette.background};
@@ -16,7 +16,7 @@ export const StyledFullCol = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  min-width: ${(props) => props.width || "100%"};
   height: 100%;
 
   background: ${(props) => props.theme.palette.background};
@@ -27,7 +27,7 @@ export const StyledFullRowPadded = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  min-width: ${(props) => props.width || "100%"};
   height: 100%;
   padding: 50px;
 
@@ -39,7 +39,7 @@ export const StyledFullColPadded = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  min-width: ${(props) => props.width || "100%"};
   height: 100%;
   padding: 50px;
 

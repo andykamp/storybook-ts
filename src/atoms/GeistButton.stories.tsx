@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentMeta } from "@storybook/react";
 import { StyledFullRowPadded, StyledPlayground } from "../decorators";
-import { Button } from "./GeistButton";
+import { Button } from "@/atoms/GeistButton";
 
 import { within, userEvent } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";

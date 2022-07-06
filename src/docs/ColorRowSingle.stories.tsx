@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledFullRowPadded, StyledPlayground } from "../decorators";
 import { ComponentMeta } from "@storybook/react";
-import { ColorRowSingle } from "./ColorRowSingle";
+import { ColorRowSingle } from "@/docs/ColorRowSingle";
 
 export default {
   title: "docs/ColorRowSingle",

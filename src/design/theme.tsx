@@ -1,7 +1,7 @@
 import { WithThemeProvider } from "./ThemeProvider";
 import { useDarkMode } from "storybook-dark-mode";
 import { create } from "@storybook/theming";
-import logo from "../assets/logo.svg";
+import logo from "@/assets/logo.svg";
 import { Themes, GeistProvider, CssBaseline } from "@geist-ui/core";
 
 // ---------------------------------------------

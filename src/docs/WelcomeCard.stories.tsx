@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledFullRowPadded, StyledPlayground } from "../decorators";
 import { ComponentMeta } from "@storybook/react";
-import { WelcomeCard } from "./WelcomeCard";
+import { WelcomeCard } from "@/docs/WelcomeCard";
 import { atoms } from "../assets";
 
 export default {

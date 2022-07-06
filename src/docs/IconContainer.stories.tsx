@@ -1,8 +1,8 @@
 import React from "react";
 
-import { StyledFullRowPadded, StyledPlayground } from "../decorators";
+import { StyledFullRowPadded } from "../decorators";
 import { ComponentMeta } from "@storybook/react";
-import { IconContainer } from "./IconContainer";
+import { IconContainer } from "@/docs/IconContainer";
 import { Activity } from "@geist-ui/icons";
 
 export default {
@@ -10,10 +10,8 @@ export default {
   component: IconContainer,
   decorators: [
     (Story) => (
-      <StyledFullRowPadded>
-        <StyledPlayground width="100px">
-          <Story />
-        </StyledPlayground>
+      <StyledFullRowPadded width="100px">
+        <Story />
       </StyledFullRowPadded>
     ),
   ],
