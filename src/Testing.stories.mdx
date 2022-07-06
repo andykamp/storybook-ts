@@ -27,7 +27,35 @@ Run test by `yarn run test-storybook` and it should look something like this:
 This should show all test for rendering stories, interaction stories, and also snapshot tests if we have some
 ![pic alt](src/assets/test-storybook.png "Title")
 
-For setup with CI see [link](https://storybook.js.org/docs/react/writing-tests/test-runner)
+For setup with CI we can run the test suites before mergin like below  (see [link](https://storybook.js.org/docs/react/writing-tests/test-runner) for more)
+
+```js
+# .github/workflows/storybook-tests.yml
+
+name: 'Storybook Tests'
+on: push
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+      - name: Install dependencies
+        run: yarn
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+      - name: Build Storybook
+        run: yarn build-storybook --quiet
+      - name: Serve Storybook and run tests
+        run: |
+          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+            "npx http-server storybook-static --port 6006 --silent" \
+            "npx wait-on tcp:6006 && yarn test-storybook"
+
+```
 
 ## Visual tests
 

@@ -14,6 +14,7 @@
 - [✓] converge and add typography and style tokens etc (figure out what should be included)
 - [✓] remove buttons at top that does not contribute 
 - [✓] clean up /docs  
+-  add aliasing (https://storybook.js.org/docs/react/builders/vite)
 - make sure that the docs actually show the right code
 
 - create headers etc in figma 
@@ -30,8 +31,12 @@
 - remove the vite part and folloe [this lik](https://davidyeiser.com/tutorials/storybook-react-with-dark-mode)
 - write a proper introduction page
 - publish and deploy workflow
+    - .github/workflows/storybook-tests.yml
+    - dependabot
+    - please release
 - changelog
 - precommits
+    - create nice changelog (check)  
 
 
 # Setup
@@ -55,7 +60,7 @@ In order to run with node 18 and up you please follow this issues [link](https:/
 # Plugins #
 
 - we remove the background plugin because of the themeing
-- add [storybook-addon-grid](storybook-addon-grid)  (background grid)
+- add [storybook-add create nice changelog (check)on-grid](storybook-addon-grid)  (background grid)
 - add [addon-a11y](https://storybook.js.org/addons/@storybook/addon-a11y) (accessivbility)
 - [✓] add [designs](https://storybook.js.org/addons/storybook-addon-designs) (add figma links)
 - [✓] add [storysource](https://storybook.js.org/addons/@storybook/addon-storysource) (view exact story source code)
