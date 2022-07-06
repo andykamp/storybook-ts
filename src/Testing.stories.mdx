@@ -23,6 +23,8 @@ For those with a play function: it also checks for errors in the play function a
 These tests run in a live browser and can be executed via the command line or your CI server.
 
 Run test by `yarn run test-storybook` and it should look something like this:
+
+This should show all test for rendering stories, interaction stories, and also snapshot tests if we have some
 ![pic alt](src/assets/test-storybook.png "Title")
 
 For setup with CI see [link](https://storybook.js.org/docs/react/writing-tests/test-runner)
@@ -35,3 +37,30 @@ Visual tests, also called visual regression tests, catch bugs in UI appearance. 
 Ideal for verifying what the user sees: layout, color, size, and contrast. Storybook is a fantastic tool for visual testing because every story is essentially a test specification. Any time you write or update a story, you get a spec for free.
 
 We use **chromatic** for this in storybook.
+
+
+## Accessibility tests
+
+Accessibility is the practice of making websites inclusive to all. That means supporting requirements such as: keyboard navigation, screen reader support, touch-friendly, usable color contrast, reduced motion, and zoom support.
+
+Accessibility tests audit the rendered DOM against a set of heuristics based on [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) rules and other industry-accepted best practices. They act as the first line of QA to catch blatant accessibility violations.
+
+
+You find the accisibility tests in realtime at the addon panel like the image below:
+
+![pic alt](src/assets/test-accessibility.png "Title")
+
+# Interactive play tests
+
+```js
+Default.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+  // find the element
+  const loginButton = await canvas.getByRole("button", { name: /Action/i });
+  // perform an action on it (in this case a click)
+  await userEvent.click(loginButton);
+  // 👇 Assert DOM structure with jest's expect
+  // await expect(canvas.getByText(/Welcome/i)).toBeInTheDocument();
+};
+
+```

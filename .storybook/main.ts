@@ -7,6 +7,7 @@ module.exports = {
     "storybook-dark-mode",
     "@storybook/addon-storysource",
     "storybook-addon-designs",
+    "@storybook/addon-a11y",
   ],
   framework: "@storybook/react",
   core: {
@@ -14,5 +15,6 @@ module.exports = {
   },
   features: {
     storyStoreV7: true,
+    interactionsDebugger: true, // 👈 Enable playback controls
   },
 };
