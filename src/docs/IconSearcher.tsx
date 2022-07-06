@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { AutoComplete } from "@geist-ui/core";
-import { IconList, OptionsObj } from "./Icons";
+import { OptionsObj } from "./Icons";
 
 interface Props {
   onSelectedChange: (options: OptionsObj[]) => void;
@@ -32,8 +32,8 @@ export const IconSearcher = ({
     const relatedOptions = allOptions.filter((item) =>
       item.value.includes(currentValue)
     );
-    updateOptions(relatedOptions);
     updateSearch(currentValue);
+    updateOptions(relatedOptions);
   };
 
   return (

@@ -1,4 +1,4 @@
-import React, { useState, ReactElement } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Card, Grid, Spacer } from "@geist-ui/core";
 import { IconSearcher } from "./IconSearcher";
@@ -26,6 +26,7 @@ interface Props {}
 
 export const Icons = ({}: Props) => {
   const [options, setOptions] = useState(IconList);
+
   const updateVisibleIcons = (options: OptionsObj[]) => {
     setOptions(options);
   };
@@ -35,6 +36,7 @@ export const Icons = ({}: Props) => {
     if (!ComponentName) return null;
     return <ComponentName />;
   };
+
   return (
     <Card width="100%">
       <StyledContainer>
@@ -47,10 +49,10 @@ export const Icons = ({}: Props) => {
           <Grid.Container gap={1} justify="center">
             {options.map(({ label }) => {
               const icon = getIcon(label);
+              if (!icon) return null;
               return (
                 <Grid key={label} xs={12} lg={6}>
-                  {icon && <IconContainer icon={icon} name={label} />}
-                  {!icon && <div>not found</div>}
+                  <IconContainer icon={icon} name={label} />
                 </Grid>
               );
             })}

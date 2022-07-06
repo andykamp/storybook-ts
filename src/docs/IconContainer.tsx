@@ -1,7 +1,6 @@
 import React, { useState, ReactElement } from "react";
 import styled from "styled-components";
-import { Text, Card, Modal, Input, Snippet } from "@geist-ui/core";
-import { Copy } from "@geist-ui/icons";
+import { Text, Card, Modal, Snippet } from "@geist-ui/core";
 
 import { PACKAGE_NAME } from "../constants";
 
@@ -36,6 +35,7 @@ export const IconContainer = ({ name, icon }: Props) => {
     console.log("close", showModal);
   };
 
+  if (!React.isValidElement(icon)) return null;
   return (
     <Card hoverable width="100%">
       <StyledContainer onClick={openHandler}>
