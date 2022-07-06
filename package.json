@@ -7,6 +7,7 @@
     "tsc": "rm -rf dist && tsc",
     "storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
     "build-storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook",
+    "build-storybook-CI": "build-storybook",
     "test-storybook": "test-storybook",
     "test-visual": "npx chromatic --project-token=82561cf7a02a"
   },
