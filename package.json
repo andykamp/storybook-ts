@@ -10,7 +10,8 @@
     "build-storybook-CI": "build-storybook",
     "test-storybook": "test-storybook",
     "test-visual": "npx chromatic --project-token=82561cf7a02a",
-    "chromatic": "npx chromatic --project-token=82561cf7a02a"
+    "chromatic": "chromatic --exit-zero-on-changes"
+
   },
   "dependencies": {
     "@geist-ui/core": "^2.3.8",
