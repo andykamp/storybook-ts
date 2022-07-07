@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledFullRowPadded } from "../decorators";
+import { CenteredPlayground } from "../decorators";
 import { ComponentMeta } from "@storybook/react";
 import { CodeCollapse } from "@/docs/CodeCollapse";
 
@@ -8,9 +8,9 @@ export default {
   component: CodeCollapse,
   decorators: [
     (Story) => (
-      <StyledFullRowPadded width="300px">
+      <CenteredPlayground width="300px">
         <Story />
-      </StyledFullRowPadded>
+      </CenteredPlayground>
     ),
   ],
 } as ComponentMeta<typeof CodeCollapse>;

@@ -12,15 +12,14 @@ Storybook provides a clean-room environment for testing components in isolation.
 
 
 ## Spot checking
+
 The simplest testing method is manual “spot checking”. You run Storybook locally, then eyeball every story to verify its appearance and behavior. Publish your Storybook online to share reproductions and get teammates involved.
 
 ## Tests runner (https://storybook.js.org/docs/react/writing-tests/test-runner) 
 
 Storybook test runner turns all of your stories into executable tests. It is powered by Jest and Playwright.
-
-For those without a play function: it verifies whether the story renders without any errors.
-For those with a play function: it also checks for errors in the play function and that all assertions passed.
-These tests run in a live browser and can be executed via the command line or your CI server.
+- For those without a play function: it verifies whether the story renders without any errors.
+- For those with a play function: it also checks for errors in the play function and that all assertions passed.
 
 Run test by `yarn run test-storybook` and it should look something like this:
 
@@ -59,19 +58,44 @@ For setup with CI we can run the test suites before mergin like below  (see [lin
                     "npx wait-on tcp:6006 && yarn test-storybook"
 
  
-TODO
-If you're running Chromatic via continuous integration, we recommend setting
-the CHROMATIC_PROJECT_TOKEN environment variable in your CI environment.
-You can then remove the --project-token from your package.json script.
 
 ## Visual tests
-
 
 Visual tests, also called visual regression tests, catch bugs in UI appearance. They work by taking screenshots of every story and comparing them commit-to-commit to identify changes.
 
 Ideal for verifying what the user sees: layout, color, size, and contrast. Storybook is a fantastic tool for visual testing because every story is essentially a test specification. Any time you write or update a story, you get a spec for free.
 
 We use **chromatic** for this in storybook.
+
+
+    # .github/workflows/chromatic.yml
+
+    # Workflow name
+    name: 'Chromatic'
+
+    # Event for the workflow
+    on: push
+
+    # List of jobs
+    jobs:
+        test:
+        # Operating System
+        runs-on: ubuntu-latest
+        # Job steps
+        steps:
+            - uses: actions/checkout@v1
+            - run: yarn
+            #👇 Adds Chromatic as a step in the workflow
+            - uses: chromaui/action@v1
+            # Options required for Chromatic's GitHub Action
+            with:
+                #👇 Chromatic projectToken,
+                projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+                token: ${{ secrets.GITHUB_TOKEN }}
+
+If you're running Chromatic via continuous integration, we recommend setting
+the CHROMATIC_PROJECT_TOKEN environment variable in your CI environment.
+You can then remove the --project-token from your package.json script.
 
 
 ## Accessibility tests

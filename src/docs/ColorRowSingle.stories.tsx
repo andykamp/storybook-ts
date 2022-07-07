@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledFullRowPadded, StyledPlayground } from "../decorators";
+import { CenteredPlayground } from "../decorators";
 import { ComponentMeta } from "@storybook/react";
 import { ColorRowSingle } from "@/docs/ColorRowSingle";
 
@@ -8,11 +8,9 @@ export default {
   component: ColorRowSingle,
   decorators: [
     (Story) => (
-      <StyledFullRowPadded>
-        <StyledPlayground width="500px">
-          <Story />
-        </StyledPlayground>
-      </StyledFullRowPadded>
+      <CenteredPlayground width="500px">
+        <Story />
+      </CenteredPlayground>
     ),
   ],
 } as ComponentMeta<typeof ColorRowSingle>;

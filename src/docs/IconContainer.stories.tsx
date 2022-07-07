@@ -1,6 +1,6 @@
 import React from "react";
 
-import { StyledFullRowPadded } from "../decorators";
+import { CenteredPlayground } from "../decorators";
 import { ComponentMeta } from "@storybook/react";
 import { IconContainer } from "@/docs/IconContainer";
 import { Activity } from "@geist-ui/icons";
@@ -10,9 +10,9 @@ export default {
   component: IconContainer,
   decorators: [
     (Story) => (
-      <StyledFullRowPadded width="100px">
+      <CenteredPlayground width="100px">
         <Story />
-      </StyledFullRowPadded>
+      </CenteredPlayground>
     ),
   ],
 } as ComponentMeta<typeof IconContainer>;

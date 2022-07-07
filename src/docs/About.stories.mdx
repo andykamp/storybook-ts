@@ -1,9 +1,12 @@
 import { Meta } from '@storybook/addon-docs';
 
+import {Header} from '@/docs/Header.tsx'
 import {Grid, Card, Text} from '@geist-ui/core'
 import {WelcomeCard} from './WelcomeCard'
 import {atoms, molecules, organisms, templates, pages} from '../assets'
 
 <Meta title="docs/about" />
 
-<WelcomeCard imgSrc={atoms} title='docs' description='docs are....'/>
+<Header text={'Docs'} imgSrc={'src/assets/HeaderComponents.png'}/>
+
+The components in this folder is shipped with this template and only ment for the storybook itself.
