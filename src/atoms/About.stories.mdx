@@ -1,9 +1,10 @@
-import { Meta } from '@storybook/addon-docs';
-
-import {Grid, Card, Text} from '@geist-ui/core'
-import {WelcomeCard} from '../docs/WelcomeCard'
-import {atoms, molecules, organisms, templates, pages} from '../assets'
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import {Header} from '@/docs/Header.tsx'
 
 <Meta title="atoms/about" />
 
-<WelcomeCard imgSrc={atoms} title='Atoms' description='Atoms are....'/>
+<Header text={'Atoms'} imgSrc={'src/assets/HeaderComponents.png'}/>
+
+Some text...
+
+
