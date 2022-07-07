@@ -1,11 +1,11 @@
 
 import { Meta } from '@storybook/addon-docs';
-
-import {Grid, Card, Text} from '@geist-ui/core'
+import {Header} from '@/docs/Header.tsx'
+import {Grid, Card, Text, Display, Image, Code} from '@geist-ui/core'
 
 <Meta title="Testing" />
 
-# Testing
+<Header text={'Testing'} imgSrc={'src/assets/HeaderDesign.png'}/>
 
 
 Storybook provides a clean-room environment for testing components in isolation.
@@ -25,37 +25,39 @@ These tests run in a live browser and can be executed via the command line or yo
 Run test by `yarn run test-storybook` and it should look something like this:
 
 This should show all test for rendering stories, interaction stories, and also snapshot tests if we have some
-![pic alt](src/assets/test-storybook.png "Title")
+
+<Display caption={<p>Set the <Code>height</Code> to reduces the possibility of page rerender.</p>}>
+  <Image  src="src/assets/test-storybook.png " />
+</Display>
+
 
 For setup with CI we can run the test suites before mergin like below  (see [link](https://storybook.js.org/docs/react/writing-tests/test-runner) for more)
 
-```js
-# .github/workflows/storybook-tests.yml
+    .github/workflows/storybook-tests.yml
 
-name: 'Storybook Tests'
-on: push
-jobs:
-  test:
-    timeout-minutes: 60
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14.x'
-      - name: Install dependencies
-        run: yarn
-      - name: Install Playwright
-        run: npx playwright install --with-deps
-      - name: Build Storybook
-        run: yarn build-storybook --quiet
-      - name: Serve Storybook and run tests
-        run: |
-          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
-            "npx http-server storybook-static --port 6006 --silent" \
-            "npx wait-on tcp:6006 && yarn test-storybook"
+    name: 'Storybook Tests'
+    on: push
+    jobs:
+    test:
+        timeout-minutes: 60
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+                with:
+                node-version: '14.x'
+            - name: Install dependencies
+                run: yarn
+            - name: Install Playwright
+                run: npx playwright install --with-deps
+            - name: Build Storybook
+                run: yarn build-storybook --quiet
+            - name: Serve Storybook and run tests
+                run: |
+                    npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+                    "npx http-server storybook-static --port 6006 --silent" \
+                    "npx wait-on tcp:6006 && yarn test-storybook"
 
-```
  
 TODO
 If you're running Chromatic via continuous integration, we recommend setting
@@ -81,19 +83,19 @@ Accessibility tests audit the rendered DOM against a set of heuristics based on 
 
 You find the accisibility tests in realtime at the addon panel like the image below:
 
-![pic alt](src/assets/test-accessibility.png "Title")
+<Display caption={<p>Set the <Code>height</Code> to reduces the possibility of page rerender.</p>}>
+  <Image  src="src/assets/test-accessibility.png" />
+</Display>
 
 # Interactive play tests
 
-```js
-Default.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // find the element
-  const loginButton = await canvas.getByRole("button", { name: /Action/i });
-  // perform an action on it (in this case a click)
-  await userEvent.click(loginButton);
-  // 👇 Assert DOM structure with jest's expect
-  // await expect(canvas.getByText(/Welcome/i)).toBeInTheDocument();
-};
+    Default.play = async ({ canvasElement }) => {
+        const canvas = within(canvasElement);
+        // find the element
+        const loginButton = await canvas.getByRole("button", { name: /Action/i });
+        // perform an action on it (in this case a click)
+        await userEvent.click(loginButton);
+        // 👇 Assert DOM structure with jest's expect
+        // await expect(canvas.getByText(/Welcome/i)).toBeInTheDocument();
+    };
 
-```
