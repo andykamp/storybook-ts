@@ -1,6 +1,6 @@
 import React from "react";
 
-import { StyledFullRowPadded, StyledPlayground } from "../decorators";
+import { CenteredPlayground } from "../decorators";
 import { ComponentMeta } from "@storybook/react";
 import { IconSearcher } from "@/docs/IconSearcher";
 import * as ICONS from "@geist-ui/icons";
@@ -10,11 +10,9 @@ export default {
   component: IconSearcher,
   decorators: [
     (Story) => (
-      <StyledFullRowPadded>
-        <StyledPlayground width="300px">
-          <Story />
-        </StyledPlayground>
-      </StyledFullRowPadded>
+      <CenteredPlayground width="300px">
+        <Story />
+      </CenteredPlayground>
     ),
   ],
 } as ComponentMeta<typeof IconSearcher>;

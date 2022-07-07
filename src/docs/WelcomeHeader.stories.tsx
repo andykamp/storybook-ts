@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledFullRowPadded, StyledPlayground } from "../decorators";
+import { CenteredPlayground } from "../decorators";
 import { ComponentMeta } from "@storybook/react";
 import { WelcomeHeader } from "@/docs/WelcomeHeader";
 
@@ -8,11 +8,9 @@ export default {
   component: WelcomeHeader,
   decorators: [
     (Story) => (
-      <StyledFullRowPadded>
-        <StyledPlayground width='650px'>
-          <Story />
-        </StyledPlayground>
-      </StyledFullRowPadded>
+      <CenteredPlayground width="650px">
+        <Story />
+      </CenteredPlayground>
     ),
   ],
 } as ComponentMeta<typeof WelcomeHeader>;

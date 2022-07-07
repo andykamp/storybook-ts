@@ -49,14 +49,18 @@ export const StyledFullColPadded = styled.div`
 // ---------------------------------------------
 // Playground component
 // ---------------------------------------------
+export const CenteredPlayground = ({ width, children }) => {
+  return (
+    <StyledFullRowPadded>
+      <StyledPlayground width={width}>{children}</StyledPlayground>
+    </StyledFullRowPadded>
+  );
+};
 
 export const StyledPlayground = ({ width, children }) => {
   return (
     <StyledPlaygroundContainer width={width}>
       <StyledPlaygroundCard>{children}</StyledPlaygroundCard>
-      <StyledPlaygroundBottom>
-        Container made with &hearts;
-      </StyledPlaygroundBottom>
     </StyledPlaygroundContainer>
   );
 };
@@ -64,9 +68,10 @@ export const StyledPlayground = ({ width, children }) => {
 export const StyledPlaygroundContainer = styled.div`
     display: flex;
     flex-direction: column;
-    border: 1px solid ${(props) => props.theme.palette.accents_2};
-    border-radius: 6px;
-    min-width: ${(props) => props.width};
+    // border: 1px solid ${(props) => props.theme.palette.accents_2};
+    // border-radius: 6px;
+    width: ${(props) => props.width || "100%"};
+    box-sizing: content-box;
 } 
 `;
 export const StyledPlaygroundCard = styled.div`
@@ -75,6 +80,7 @@ export const StyledPlaygroundCard = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width:100%;
 } 
 `;
 const StyledPlaygroundBottom = styled.div`

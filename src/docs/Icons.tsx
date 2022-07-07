@@ -5,6 +5,9 @@ import { IconSearcher } from "./IconSearcher";
 import { IconContainer } from "./IconContainer";
 import * as ICONS from "@geist-ui/icons";
 
+// exporting all icons
+export const allIcons = ICONS;
+
 export interface OptionsObj {
   label: string;
   value: string;

@@ -2,12 +2,13 @@
   "name": "tdd-storybook",
   "private": true,
   "version": "0.0.0",
-  "main": "dist/index.js",
+  "main": "dist/index.ts",
   "scripts": {
     "tsc": "rm -rf dist && tsc",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test-storybook": "test-storybook",
+    "test-units": "jest",
     "test-visual": "npx chromatic --project-token=82561cf7a02a",
     "chromatic": "chromatic --exit-zero-on-changes"
 

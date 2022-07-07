@@ -1,6 +1,6 @@
 import React from "react";
 
-import { StyledFullRowPadded } from "../decorators";
+import { CenteredPlayground } from "../decorators";
 import { ComponentMeta } from "@storybook/react";
 
 import { ColorSection } from "@/docs/ColorSection";
@@ -10,9 +10,9 @@ export default {
   component: ColorSection,
   decorators: [
     (Story) => (
-      <StyledFullRowPadded>
+      <CenteredPlayground>
         <Story />
-      </StyledFullRowPadded>
+      </CenteredPlayground>
     ),
   ],
 } as ComponentMeta<typeof ColorSection>;

@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentMeta } from "@storybook/react";
-import { StyledFullRowPadded, StyledPlayground } from "../decorators";
+import { CenteredPlayground } from "../decorators";
 import { Button } from "@/atoms/GeistButton";
 
 import { within, userEvent } from "@storybook/testing-library";
@@ -11,11 +11,9 @@ export default {
   component: Button,
   decorators: [
     (Story) => (
-      <StyledFullRowPadded>
-        <StyledPlayground>
-          <Story />
-        </StyledPlayground>
-      </StyledFullRowPadded>
+      <CenteredPlayground>
+        <Story />
+      </CenteredPlayground>
     ),
   ],
 } as ComponentMeta<typeof Button>;
