@@ -21,9 +21,12 @@ To add aliases you have to:
 - [✓] converge and add typography and style tokens etc (figure out what should be included)
 - [✓] remove buttons at top that does not contribute 
 - [✓] clean up /docs  
+- [✓] add aliasing (https://storybook.js.org/docs/react/builders/vite)
+- fix node version, tests and CI
 - fix containers
--  add aliasing (https://storybook.js.org/docs/react/builders/vite)
+- fix code in docs plugin and markdown code
 - make sure that the docs actually show the right code
+- 
 
 - create headers etc in figma 
 - add them to the docs and also add the figma files for them
